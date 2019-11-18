@@ -1,0 +1,17 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: cloud-auth
+
+eureka:
+  client:
+    service-url:
+      # Eureka注册中心连接地址
+      # 如果注册中心地址配置的域名，这里使用 http://域名/eureka/ 格式
+      defaultZone: http://localhost:8080/eureka/
+feign:
+  hystrix:
+    # 开启Feign的Hystrix熔断器支持
+    enabled: true
